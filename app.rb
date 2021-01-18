@@ -13,4 +13,5 @@ get '/hello' do
 end
 
 get '/cat' do
+    '<img style="border: red 3px dashed" src="https://icatcare.org/app/uploads/2018/07/Thinking-of-getting-a-cat.png">'
 end
