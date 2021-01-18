@@ -1,17 +1,9 @@
 require 'sinatra'
 
-get '/' do
-    'Hello Dude!'
-end
 
-get '/secret' do
-    'This is a TOP page'
-end
-
-get '/hello' do
-    'Whazap?'
-end
 
 get '/cat' do
+
+    @catname = ["Amigo", "Oscar", "Viking"].sample
     erb(:index)
 end
