@@ -1,3 +1,11 @@
-<img style="border: red 3px dashed" src="https://icatcare.org/app/uploads/2018/07/Thinking-of-getting-a-cat.png">
+<% if @catname %>
 <h1> My name is <%= @catname %></h1>
-<h2> I am <%= @age %> years old, which is <%= (@age.to_i / 7).to_s %> in cat years</h2>
+<% end %>
+
+<% if !@catname %>
+<form action="/named-cat">
+    <input type="text" name="name">
+    <input type="submit" value="Submit">
+</form>
+<% end %>
+<img style="border: red 3px dashed" src="https://icatcare.org/app/uploads/2018/07/Thinking-of-getting-a-cat.png">
